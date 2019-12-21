@@ -1,0 +1,60 @@
+.Login fieldset{
+  background-color: #8dd1b8;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+.Login legend{
+  background-color: #8dd1b8;
+  border: 5px solid black;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.Login label{
+  display: block;
+}
+.Login input {
+  border-radius: 25px;
+  display: block;
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+} 
+
+.Login input:focus{
+  outline: none;
+}
+
+.Login button {
+  border-radius: 25px;
+  background-color: blueviolet;
+  padding: 6px 10px;
+  width: 100%;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+} 
+.Login button:hover {
+  background: #ccc;
+}
+
+/*Login when below 600px*/
+@media screen and (max-width: 600px) {
+.Login button {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  }
+  .Login fieldset{
+    margin: auto;
+  }
+  
+} 

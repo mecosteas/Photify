@@ -1,0 +1,125 @@
+
+/*CARD FORMAT*/
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: auto;
+    text-align: center;
+    background-color: #4dc8ea;
+}
+/*END OF CARD FORMAT*/
+
+/*Styling for View Image*/
+.responsive {
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: 80%;
+}
+
+/* Left column */
+.left-column {   
+  float: left;
+  width: 75%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* Right column */
+.right-column {
+  float: left;
+  width: 25%;
+}
+.submitComment {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background: #4dc8ea;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+#comment{
+  resize: none;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  background-color: #a6dace;
+}
+#imgTitle{
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 10%;
+  background-color: #4dc8ea;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+}
+#imgDescription{
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 20%;
+  background-color: #4dc8ea;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+  overflow-y: scroll;
+
+}
+#postedComments{
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 45%;
+  background-color: #4dc8ea;
+  border-radius: 0px 0px 20px 20px;
+  /* text-align: center; */
+  overflow-y: scroll;
+}
+label{
+  width: 100%;
+  height: 25px;
+  padding-top: 5px;
+  display: inline-block;
+  background-color: black;
+  color:white;
+  text-align: center;
+  border-radius: 20px 20px 0px 0px;
+}
+.comment-username{
+  font-weight: 700;
+}
+.comment-box {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding-left: 10px;
+
+}
+/*END OF VIEW IMAGE PAGE*/

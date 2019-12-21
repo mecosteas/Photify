@@ -1,0 +1,86 @@
+.Register fieldset{
+  background-color: #8dd1b8;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+.Register legend{
+  background-color: #8dd1b8;
+  border: 5px solid black;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.Register label{
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.Register input {
+  border-radius: 25px;
+  display: block;
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+} 
+
+.Register input:focus{
+  outline: none;
+}
+
+.Register button {
+  border-radius: 25px;
+  background-color: blueviolet;
+  padding: 6px 10px;
+  width: 100%;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+} 
+.Register button:hover {
+  background: #ccc;
+}
+
+.Register #checkAge,
+.Register #checkTOS
+{
+  display: inline-block;
+  width: 5%;
+}
+.Register .chkAge,
+.Register .chkTOS{
+  display: inline-block;
+  width: 90%;
+}
+
+.Register .ageBox,
+.Register .tosBox{
+  width: 100%;
+}
+.Register .allCheckBoxes{
+  display: flex; 
+  text-align:justify; 
+  flex-direction:column; 
+  align-items:center; 
+  justify-content:center;
+}
+
+/*Login when below 600px*/
+@media screen and (max-width: 600px) {
+.Register button {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  }
+  .Register fieldset{
+    margin: auto;
+  }
+  
+} 

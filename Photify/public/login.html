@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Screen</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="User login screen."/>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <link rel="stylesheet" href="stylesheets/login.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script defer type="text/JavaScript" src="javascripts/login_reg_validation.js"></script>
+    <script defer type="text/JavaScript" src="javascripts/session_changes.js"></script>
+</head>
+<body>
+    <div class="topnav" id="myTopNav">
+        <!--Home Page-->  
+        <a href="index.html">Home</a>
+        <!-- Register -->
+        <a id="registration-button" href="registration.html">Register</a>
+        <!-- Post Image -->
+        <a href="postimage.html">Post Image</a>
+        <!-- Login -->
+        <a class="active" id="login-button" href="login.html">Login</a>
+        <!--Hamburger Menu When window becomes smaller than 600px-->
+        <a href="javascript:void(0);" class="icon" onclick="iconNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <!-- Search -->
+        <!-- No action yet -->
+        <div class="search-container">
+        <form action="/search.html">
+          <input id="search-bar" type="text" placeholder="Search by title..." name="search">
+          <button id="search-button" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Photify</h1>
+    </div>
+    <form name="loginForm" action="/login" method="POST" onsubmit="return validateForm();">
+        <div class="Login">
+            <fieldset>
+                <legend>Login</legend>
+                
+                    <label for="username">Username</label>
+                    <input id="usrName" type="text" name="username" required />
+
+                    <p id="usrNameValMsg"></p>
+
+                    <label for="password">Password</label>
+                    <input id="usrPwd" type="password" name="password" required />
+
+                    <p id="pwdValMsg"></p>
+
+                    <button class="button" type="submit" value="Sign in" width="50px">Log In</button>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

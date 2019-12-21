@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="New user registration form."/>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <link rel="stylesheet" href="stylesheets/registration.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer type="text/JavaScript" src="javascripts/login_reg_validation.js"></script>
+    <script defer type="text/JavaScript" src="javascripts/session_changes.js"></script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopNav">
+        <!--Home Page--> 
+        <a href="index.html">Home</a>
+        <!-- Register -->
+        <a class="active" id="registration-button" href="registration.html">Register</a>
+        <!-- Post Image -->
+        <a href="postimage.html">Post Image</a>
+        <!-- Login -->
+        <a id="login-button" href="login.html">Login</a>
+        <!--Hamburger Menu When window becomes smaller than 600px-->
+        <a href="javascript:void(0);" class="icon" onclick="iconNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <!-- Search -->
+        <!-- No action yet -->
+        <div class="search-container">
+        <form action="/search.html">
+          <input id="search-bar" type="text" placeholder="Search by title..." name="search">
+          <button id="search-button" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>Photify</h1>
+    </div>
+    
+    <form id="regForm" name="registrationForm" action="/register" method="POST"
+        onsubmit="return validateForm();">
+        <div class="Register">
+            <fieldset>
+                <legend>Register</legend>
+                        <label for="username">Username</label>
+                        <input id="usrName" type="text" name="username" required/>
+    
+                        <!-- Box 3 Empty -->
+                        <!-- Username Validation Message -->
+                        <p id="usrNameValMsg"></p>
+
+                        <label for="email">Email</label>
+                        <input id="usrEmail" type="email" name="email" required/>
+
+                        <label for="password">Password</label>
+                        <input id="usrPwd" type="password" name="password" required/>
+
+                        <p id="pwdValMsg"></p>
+
+                        <p id="requirements-note">
+                            Password must be minimum 8 characters long</br>
+                            and contain at least one of each of the following:</br>
+                            - upper case letter</br>
+                            - number</br>
+                            - special character i.e. !@#$^&*()-
+                        </p>
+
+                        <label for="confirmpass">Confirm Password</label>
+                        <input id="confirmPwd" type="password" name="confirmpass" required/>
+
+                        <p id="confirmPwdValMsg"></p>
+
+                        <div class="allCheckBoxes">
+                            <div class="ageBox">
+                                <input id="checkAge" type="checkbox" name="checkAge" value="Yes" required/>
+                                <label class="chkAge" for="checkAge">Check this box only if you are 13 years of age or older.</label>
+                            </div>
+                            <div class="tosBox">
+                                <input id="checkTOS" type="checkbox" name="checkTOS" value="Yes" required/>
+                                <label class="chkTOS" for="checkTOS">Check this box only if you accept TOS and Privacy Rules.</label>
+                            </div>
+                        </div>
+                        <button class="button" type="submit">Sign Up</button>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>
