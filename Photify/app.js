@@ -7,6 +7,12 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    console.log(`Starting server at port ${port}`);
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));   // for body parser
