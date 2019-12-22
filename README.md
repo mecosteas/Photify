@@ -7,9 +7,12 @@
 | Team Member 1 | Roberto Herman| rhermanvaldivia@mail.sfsu.edu|
 | Team Member 2 | Kevin Danh    | kdanh@mail.sfsu.edu          |
 
-# Build/Run Instructions
+# Dependencies
 
-Below please explain how to fully install and run your application.
+- Node.js
+- SQLite3
+
+# Build/Run Instructions
 
 Install the app's dependencies from within the Photify directory:
 ```
