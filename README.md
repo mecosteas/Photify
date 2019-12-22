@@ -1,4 +1,6 @@
 # Photify Web App
+The app might already be running on Heroku. You can check it out [here](https://photify-webapp.herokuapp.com/ "Photify on Heroku").
+
 
 ## Team  Member Information
 
@@ -25,5 +27,3 @@ Run the app:
 npm start
 ```
 Now you should be able to navigate to http://localhost:3000/ on your favorite browser and see the app running.
-
-The app might already be running on Heroku. You can check it out [here](https://photify-webapp.herokuapp.com/ "Photify on Heroku").
