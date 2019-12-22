@@ -4,7 +4,12 @@
 const bcrypt = require('bcryptjs');
 const path = require('path');
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database(path.resolve(__dirname, './photify.db'));
+const db = new sqlite3.Database(path.resolve(__dirname, './photify.db'), (err) => {
+    if(err){
+        return console.error(err.message);
+    }
+    console.log("Connected to database successfuly!")
+});
 
 function User() { };
 
@@ -46,7 +51,7 @@ User.prototype = {
     },
     // Used for retreiving an image through the imgId url parameter in ViewImage.html
     getImgDataById: function(imgId, callback) {
-        // let sql = `SELECT * FROM imageposts WHERE id = ${imgId}`;
+        
         let sql = `
             SELECT i.title, i.description, i.photopath, u.username
             FROM imageposts i
@@ -64,7 +69,7 @@ User.prototype = {
     },
     // Used for searching images by title
     getImgDataByTitle: function(imgTitle, callback) {
-        let sql = `SELECT * FROM imageposts WHERE title REGEXP '${imgTitle}*'`;
+        let sql = `SELECT * FROM imageposts WHERE title LIKE '%${imgTitle}%'`;
         db.all(sql, function(err, results) {
             if(err){
              console.log("getImgDataByTitle went wrong")
