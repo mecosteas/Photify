@@ -1,14 +1,6 @@
 # Photify Web App
 The app might already be running on Heroku. You can check it out [here](https://photify-webapp.herokuapp.com/ "Photify on Heroku").
 
-
-## Team  Member Information
-
-|               | Name          | Email         |
-|:-------------:|:-------------:|:-------------:|
-| Team Member 1 | Roberto Herman| rhermanvaldivia@mail.sfsu.edu|
-| Team Member 2 | Kevin Danh    | kdanh@mail.sfsu.edu          |
-
 # Dependencies
 
 - Node.js
